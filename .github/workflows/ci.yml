@@ -42,12 +42,15 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: "20"   # ✅ IMPORTANT FIX
 
-      - name: Install dependencies
+      - name: Clean install dependencies
         working-directory: Testing/exp6
-        run: npm install
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
-      - name: Run tests
+      - name: Run Vitest
         working-directory: Testing/exp6
-        run: npx vitest --run
+        run: |
+          npx vitest run --no-threads   # ✅ FIX for CI crash
