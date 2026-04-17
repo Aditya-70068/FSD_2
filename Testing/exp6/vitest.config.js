@@ -6,14 +6,14 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    pool: 'threads',
+    pool: 'forks',
     poolOptions: {
-      threads: {
-        singleThread: true, // Use single thread to avoid worker pool issues
+      forks: {
+        singleFork: true
       }
     },
     deps: {
-      inline: ['@exodus/bytes', 'html-encoding-sniffer'] // Inline these modules
+      inline: ['@exodus/bytes', 'html-encoding-sniffer']
     }
   }
 })
