@@ -4,9 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   test: {
-    environment: 'jsdom',
-    globals: true,
-    threads: false,     // ✅ disables worker crash
-    isolate: false      // ✅ prevents module duplication issues
+    environment: 'happy-dom',   // ✅ KEY FIX (instead of jsdom)
+    globals: true
   }
 })
