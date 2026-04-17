@@ -95,3 +95,10 @@ npm run test
 Unit testing was successfully implemented for both frontend and backend modules using CLI tools. Automation was achieved using GitHub Actions, ensuring tests run automatically on every code update.
 
 ---
+
+##  learning outcomes
+
+Understood how to perform unit testing for backend APIs using pytest
+Learned to test REST endpoints using Flask test client
+Gained experience in writing test cases for CRUD operations
+Learned how to ensure test isolation using fixtures
