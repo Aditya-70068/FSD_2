@@ -53,4 +53,4 @@ jobs:
       - name: Run Vitest
         working-directory: Testing/exp6
         run: |
-          npx vitest run
+          npx vitest run --no-threads 
