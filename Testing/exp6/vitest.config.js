@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'happy-dom'   // ✅ FIX (no jsdom)
+    environment: 'happy-dom'   // ✅ FIXES your CI error
   }
 })
